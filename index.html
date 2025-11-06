@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido de Hamburguesas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f6e3c5; /* Fondo suave */
+    }
+    h1 {
+      color: #b30000;
+    }
+    .container {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    form {
+      background-color: #f1c40f;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      flex: 1;
+    }
+    .imagenes {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .imagenes img {
+      width: 60%;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    select, input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    .checkbox-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .radio-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .total {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Realiza tu Pedido de Hamburguesas</h1>
+  <div class="container">
+    <form id="pedidoForm">
+      <label for="especialidad">Especialidad:</label>
+          <select id="especialidad" name="especialidad">
+              <option value="clasica">Clásica $80.00 MXN</option>
+              <option value="bbq">BBQ $100.00 MXN</option>
+              <option value="tocino">Con Tocino $120.00 MXN</option>
+              <option value="doble">Doble Carne $150.00 MXN</option>
+              <option value="hawaiana">Hawaiana $180.00 MXN</option>
+          </select>
+
+      <label for="pan">Tipo de Pan:</label>
+          <div class="radio-list">
+              <label for="clasico"><input type="radio">Clásico</label>
+              <label for="ajonjoli"><input type="radio">Con Ajonjolí (+20 MXN)</label>
+              <label for="integral"><input type="radio">Integral (+20 MXN)</label>
+              <label for="brioche"><input type="radio">Brioche (+50 MXN)</label>
+          </div>
+
+      <label>Ingredientes adicionales (5.00 MXN c/u):</label>
+      <div class="checkbox-list">
+        <label><input type="checkbox" value="queso"> Queso</label>
+        <label><input type="checkbox" value="lechuga"> Lechuga</label>
+        <label><input type="checkbox" value="jitomate"> Jitomate</label>
+        <label><input type="checkbox" value="cebolla"> Cebolla</label>
+        <label><input type="checkbox" value="jalapeño"> Jalapeño</label>
+        <label><input type="checkbox" value="huevo"> Huevo</label>
+        <label><input type="checkbox" value="pepino"> Pepino</label>
+        <label><input type="checkbox" value="champiñones"> Champiñones</label>
+        <label><input type="checkbox" value="tocino"> Tocino extra</label>
+        <label><input type="checkbox" value="dobleQueso"> Doble Queso</label>
+        <label><input type="checkbox" value="piña"> Piña</label>
+        <label><input type="checkbox" value="guacamole"> Guacamole</label>
+        <label><input type="checkbox" value="bbq"> Salsa BBQ</label>
+        <label><input type="checkbox" value="chipotle"> Aderezo Chipotle</label>
+        <label><input type="checkbox" value="mayonesa"> Mayonesa</label>
+        <label><input type="checkbox" value="mostaza"> Mostaza</label>
+        <label><input type="checkbox" value="ketchup"> Ketchup</label>
+        <label><input type="checkbox" value="pepperoni"> Pepperoni</label>
+        <label><input type="checkbox" value="arugula"> Arúcula</label>
+        <label><input type="checkbox" value="cebollaCaramelizada"> Cebolla Caramelizada</label>
+      </div>
+
+      <label for="cantidad">Cantidad de Hamburguesas:</label>
+      <input type="number" id="cantidad" name="cantidad" min="1" value="1">
+
+      <label>
+        <input type="checkbox" id="domicilio" name="domicilio">
+        ¿Es a domicilio? (+$30 MXN)
+      </label>
+
+      <div class="total" id="total">Total: $0.00</div>
+
+      <button type="button">Calcular Total</button>
+    </form>
+    <div class="imagenes">
+      <img src="" alt="">
+      <img src="img/hamburguesas-caseras-gourmet.png" alt="Hamburguesa 1">
+      <img src="img/KFD_SpicyBBQBaconRanchBurger35382_WEB.avif" alt="Hamburguesa 2">
+    </div>
+  </div>
+</body>
+</html>
