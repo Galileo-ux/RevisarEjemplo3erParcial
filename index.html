@@ -22,10 +22,10 @@
 
       <label for="pan">Tipo de Pan:</label>
           <div class="radio-list">
-              <label for="clasico"><input type="radio">Clásico</label>
-              <label for="ajonjoli"><input type="radio">Con Ajonjolí (+20 MXN)</label>
-              <label for="integral"><input type="radio">Integral (+20 MXN)</label>
-              <label for="brioche"><input type="radio">Brioche (+50 MXN)</label>
+              <label for="clasico"><input type="radio" name="pan" value="clasico">Clásico</label>
+              <label for="ajonjoli"><input type="radio" name="pan" value="ajonjoli">Con Ajonjolí (+20 MXN)</label>
+              <label for="integral"><input type="radio" name="pan" value="integral">Integral (+20 MXN)</label>
+              <label for="brioche"><input type="radio" name="pan" value="brioche">Brioche (+50 MXN)</label>
           </div>
 
       <label>Ingredientes adicionales (5.00 MXN c/u):</label>
@@ -62,7 +62,7 @@
 
       <div class="total" id="total">Total: $0.00</div>
 
-      <button type="button">Calcular Total</button>
+      <button type="button" onclick="calcularTotal()">Calcular Total</button>
     </form>
     <div class="imagenes">
       <img src="img/75869405.jpg" alt="Baguette 1">
